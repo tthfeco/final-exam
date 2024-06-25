@@ -1,3 +1,7 @@
+import './App.css';
+import Header from './components/Header';
+import CatCard from './components/CatCard';
+
 const cats = [
   {
     id: 1,
@@ -21,7 +25,19 @@ const cats = [
 
 function App() {
   return (
-    <h1>App</h1>
+    <div className="app">
+      <Header />
+      <div className="cat-list">
+        {cats.map(cat => (
+          <CatCard
+            key={cat.id}
+            name={cat.name}
+            image={cat.image}
+            description={cat.description}
+          />
+        ))}
+      </div>
+    </div>
   );
 }
 
