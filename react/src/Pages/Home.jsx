@@ -22,7 +22,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="text-xl font-bold text-red-50">
+    <div className="flex items-center justify-center h-screen">
       <div className="bg-gray-700 w-3/4 h-3/4 flex items-center justify-center rounded-lg shadow-lg">
         {isLoading && <div className="text-white text-center">Loading...</div>}
         {!isLoading && (
